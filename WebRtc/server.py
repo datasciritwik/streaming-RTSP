@@ -135,8 +135,8 @@ async def offer(request):
     log_info("Created for %s", request.remote)
 
     # prepare local media
-    player_audio = MediaPlayer(os.path.join(ROOT, "demo-instruct.wav"))
-    player_video = MediaPlayer(os.path.join(ROOT, "drone_wa.mp4"))
+    player_audio = MediaPlayer(os.path.join(ROOT, "demo-instruct.wav")) ##local audio path
+    player_video = MediaPlayer(os.path.join(ROOT, "drone_wa.mp4")) ##local video path
     # player_video = MediaPlayer('rtsp://admin:Admin1234@183.82.105.11/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46QWRtaW4xMjMh')
     if args.write_audio:
         recorder = MediaRecorder(args.write_audio)
